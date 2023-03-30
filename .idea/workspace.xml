@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ca82228-104d-4b18-9d5d-50cadcf0ea7f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-playground.iml" beforeDir="false" afterPath="$PROJECT_DIR$/java-playground.iml" afterDir="false" />
+    <list default="true" id="1ca82228-104d-4b18-9d5d-50cadcf0ea7f" name="Changes" comment="refactor : 상속을 통한 중복코드 제거">
       <change beforePath="$PROJECT_DIR$/src/starbuzz/CaffeineBeverage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/starbuzz/CaffeineBeverage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/starbuzz/Coffee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/starbuzz/Coffee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/starbuzz/Tea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/starbuzz/Tea.java" afterDir="false" />
@@ -54,8 +52,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680147847600</updated>
-      <workItem from="1680147849796" duration="664000" />
+      <workItem from="1680147849796" duration="1173000" />
     </task>
+    <task id="LOCAL-00001" summary="refactor : 상속을 통한 중복코드 제거">
+      <created>1680148537892</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680148537892</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -71,5 +77,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactor : 상속을 통한 중복코드 제거" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor : 상속을 통한 중복코드 제거" />
   </component>
 </project>

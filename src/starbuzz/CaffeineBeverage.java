@@ -1,6 +1,8 @@
 package starbuzz;
 
-public class CaffeineBeverage {
+public abstract class CaffeineBeverage {
+    abstract void prepareRecipe();
+
     protected void boilWater() {
         System.out.println("물을 끓인다.");
     }
@@ -8,4 +10,7 @@ public class CaffeineBeverage {
     protected void pourInCup() {
         System.out.println("컵에 붓는다.");
     }
+
+    abstract void addCondiments();
+    abstract void brew();
 }

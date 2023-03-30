@@ -3,16 +3,16 @@ package starbuzz;
 public class Coffee extends CaffeineBeverage {
     void prepareRecipe() {
         super.boilWater();
-        brewCoffeeGrinds();
+        brew();
         super.pourInCup();
-        addSugarAndMilk();
+        addCondiments();
     }
 
-    private void addSugarAndMilk() {
+    void addCondiments() {
         System.out.println("설탕과 우유를 추가한다.");
     }
 
-    private void brewCoffeeGrinds() {
+    void brew() {
         System.out.println("필터를 활용해 커피를 내린다.");
     }
 }
