@@ -2,11 +2,11 @@ package starbuzz;
 
 public class App {
     public static void main(String[] args) {
-        Coffee coffee = new Coffee();
-        Tea tea = new Tea();
+        CaffeineBeverage beverage1 = new Coffee();
+        CaffeineBeverage beverage2 = new Tea();
 
-        coffee.prepareRecipe();
+        beverage1.prepareRecipe();
         System.out.println("-------------------");
-        tea.prepareRecipe();
+        beverage2.prepareRecipe();
     }
 }
