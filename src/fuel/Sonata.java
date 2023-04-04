@@ -7,17 +7,17 @@ public class Sonata extends Car{
     }
 
     @Override
-    double getDistancePerLiter() {
+    public double getDistancePerLiter() {
         return 10;
     }
 
     @Override
-    double getTripDistance() {
+    public double getTripDistance() {
         return distance;
     }
 
     @Override
-    String getName() {
+    public String getName() {
         return "Sonata";
     }
 }
