@@ -49,16 +49,8 @@ public class PosTest {
     void calculateDistanceV2() {
         Pos pos1 = new Pos(10,10);
         Pos pos2 = new Pos(14,15);
+        double result = Pos.calculateDistance(pos1, pos2);
 
-        double num1 = Math.pow(pos1.getX() - pos2.getX(), 2);
-        double num2 = Math.pow(pos1.getY() - pos2.getY(), 2);
-        double num3 = Math.sqrt(num1 + num2);
-
-        double distance = Math.round(num3 * 1000000) / 1000000.0;
-
-        assertThat(num1).isEqualTo(16);
-        assertThat(num2).isEqualTo(25);
-        assertThat(num3).isEqualTo(6.4031242374328485);
-        assertThat(distance).isEqualTo(6.403124);
+        assertThat(result).isEqualTo(6.403124);
     }
 }
