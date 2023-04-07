@@ -17,4 +17,19 @@ public class Pos {
     private boolean isPosInvalidNumber(int xPos, int yPos) {
         return xPos > MAX_POS || yPos > MAX_POS || xPos < MIN_POS || yPos < MIN_POS;
     }
+
+    public static double calculateDistance(Pos pos1, Pos pos2) {
+        double result = Math.sqrt(Math.pow(pos1.getX() - pos2.getX(), 2)
+                + Math.pow(pos1.getY() - pos2.getY(), 2));
+
+        return Math.round(result * 1000000) / 1000000.0;
+    }
+
+    public int getX() {
+        return this.xPos;
+    }
+
+    public int getY() {
+        return this.yPos;
+    }
 }
