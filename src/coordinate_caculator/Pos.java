@@ -20,10 +20,6 @@ public class Pos {
         return xPos > MAX_POS || yPos > MAX_POS || xPos < MIN_POS || yPos < MIN_POS;
     }
 
-    private String[] convertInput(String input) {
-        return input.replaceAll("[()]", "").split("-");
-    }
-
     public int getX() {
         return this.xPos;
     }
