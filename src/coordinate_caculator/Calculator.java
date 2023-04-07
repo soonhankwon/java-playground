@@ -8,7 +8,28 @@ import java.util.stream.Collectors;
 public class Calculator {
     public void printCalculateResult(String input) {
         List<Pos> list = createPosList(input);
-        System.out.println("두 점 사이의 거리는 " + calculateDistance(list.get(0), list.get(1)));
+        if (list.size() == 2) {
+            System.out.println("두 점 사이의 거리는 " + calculateDistance(list.get(0), list.get(1)));
+        }
+        if (list.size() == 4)
+            System.out.println("사각형 넓이는 " + calculateSpace(list));
+    }
+
+    private int calculateSpace(List<Pos> list) {
+        int height = 0;
+        int width = 0;
+
+        for (Pos pos : list) {
+            if (list.get(0).getX() == pos.getX()) {
+                height = Math.abs(list.get(0).getY() - pos.getY());
+            }
+            if (list.get(0).getY() == pos.getY()) {
+                width = Math.abs(list.get(0).getX() - pos.getX());
+            }
+            if (height > 0 && width > 0)
+                break;
+        }
+        return height * width;
     }
 
     protected List<Pos> createPosList(String input) {
