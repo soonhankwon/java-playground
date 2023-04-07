@@ -5,11 +5,11 @@ import java.util.Objects;
 public class Pos {
     public static final int MAX_POS = 24;
     public static final int MIN_POS = 0;
-    private int xPos;
-    private int yPos;
+    private final int xPos;
+    private final int yPos;
 
     public Pos(int xPos, int yPos) {
-        if(isPosInvalidNumber(xPos, yPos)) {
+        if (isPosInvalidNumber(xPos, yPos)) {
             throw new IllegalArgumentException();
         }
         this.xPos = xPos;
@@ -20,11 +20,8 @@ public class Pos {
         return xPos > MAX_POS || yPos > MAX_POS || xPos < MIN_POS || yPos < MIN_POS;
     }
 
-    public static double calculateDistance(Pos pos1, Pos pos2) {
-        double result = Math.sqrt(Math.pow(pos1.getX() - pos2.getX(), 2)
-                + Math.pow(pos1.getY() - pos2.getY(), 2));
-
-        return Math.round(result * 1000000) / 1000000.0;
+    private String[] convertInput(String input) {
+        return input.replaceAll("[()]", "").split("-");
     }
 
     public int getX() {

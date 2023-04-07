@@ -1,5 +1,6 @@
 package test.coordinate_calculator;
 
+import coordinate_caculator.Calculator;
 import coordinate_caculator.Pos;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -9,7 +10,7 @@ import java.text.DecimalFormat;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-public class PosTest {
+public class PosTest extends Calculator{
     @Test
     @DisplayName("X, Y좌표 모두 최대 24까지만 입력 테스트")
     void maxPosNumber() {
@@ -49,7 +50,7 @@ public class PosTest {
     void calculateDistanceV2() {
         Pos pos1 = new Pos(10,10);
         Pos pos2 = new Pos(14,15);
-        double result = Pos.calculateDistance(pos1, pos2);
+        double result = super.calculateDistance(pos1, pos2);
 
         assertThat(result).isEqualTo(6.403124);
     }
