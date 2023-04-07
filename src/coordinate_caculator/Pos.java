@@ -1,5 +1,7 @@
 package coordinate_caculator;
 
+import java.util.Objects;
+
 public class Pos {
     public static final int MAX_POS = 24;
     public static final int MIN_POS = 0;
@@ -31,5 +33,18 @@ public class Pos {
 
     public int getY() {
         return this.yPos;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pos pos = (Pos) o;
+        return xPos == pos.xPos && yPos == pos.yPos;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(xPos, yPos);
     }
 }
